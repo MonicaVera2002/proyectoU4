@@ -13,4 +13,16 @@ class ExampleTest extends TestCase
     {
         $this->assertTrue(true);
     }
+
+    /** Agregando funciones */
+    public function test_int_addition(): void
+    {
+        $controller = new OperationsController;
+
+        $this->assertIsInt($controller->addition(a: 5, b: 6));
+
+        $this->assertNotNull($controller->addition(a: 5, b: 6));
+
+        $this->assertGreaterThan(minimum: 5, $controller->addition(a: 5, b: 6));
+    }
 }
